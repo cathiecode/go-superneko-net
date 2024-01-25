@@ -12,12 +12,14 @@
 		kariKari: number;
 		sabaCan: number;
 		maguroCan: number;
+		chuuru: number;
 	}>();
 
 	items.set({
 		kariKari: 0,
 		sabaCan: 0,
-		maguroCan: 0
+		maguroCan: 0,
+		chuuru: 0
 	});
 
 	setContext('clickCount', clickCount);
@@ -30,7 +32,7 @@
 		}, 250);
 
 		items.subscribe((item) => {
-			currentRate = item.kariKari * 1 + item.sabaCan * 2 + item.maguroCan * 5;
+			currentRate = item.kariKari * 1 + item.sabaCan * 2 + item.maguroCan * 5 + item.chuuru * 10;
 		});
 
 		return () => {
